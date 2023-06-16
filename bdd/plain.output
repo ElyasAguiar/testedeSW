@@ -1,0 +1,49 @@
+Funcionalidade: Pesquisa de Voos
+
+  Cenário: Pesquisar voos com origem e destino válidos
+    Dado que estou na página inicial ... passed in 13.215s
+    Quando eu seleciono a origem como "Aracaju" ... passed in 2.922s
+    E eu seleciono o destino como "São Paulo" ... passed in 2.288s
+    E eu escolho a data ida como "016/06/2023" ... passed in 2.854s
+    E eu escolho a data retorno como "06/07/2023" ... passed in 0.320s
+    E eu clico no botão de pesquisa ... failed in 0.029s
+Traceback (most recent call last):
+  File "/Users/elyassantana/Envs/scraping/lib/python3.9/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+  File "/Users/elyassantana/Envs/scraping/lib/python3.9/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features/steps/teste.py", line 51, in step_clicar_pesquisa
+    button = context.web.find_element(By.CSS_SELECTOR, x_path)
+  File "/Users/elyassantana/Envs/scraping/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 831, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/elyassantana/Envs/scraping/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/elyassantana/Envs/scraping/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#spa-root > main > div:nth-child(1) > div.aem-page.AzulPage.page.basicpage > div:nth-child(1) > div.aem-container.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div:nth-child(3) > div.aem-container.aem-Grid.aem-Grid--12.aem-Grid--tablet--12.aem-Grid--default--12.aem-Grid--phone--12 > div:nth-child(1) > div.css-1sel6ui > div.css-16ub5e0 > div > nav > div > div > div:nth-child(1) > div.css-1eztqvd > div:nth-child(1) > ul > li:nth-child(2) > div > div.form-stations-wrapper.css-187knvu > div > div.css-nzp9bm > div > div > div.css-1p9ikbq > button"}
+  (Session info: chrome=114.0.5735.106)
+Stacktrace:
+0   chromedriver                        0x000000010a9486b8 chromedriver + 4937400
+1   chromedriver                        0x000000010a93fb73 chromedriver + 4901747
+2   chromedriver                        0x000000010a4fd616 chromedriver + 435734
+3   chromedriver                        0x000000010a540e0f chromedriver + 712207
+4   chromedriver                        0x000000010a5410a1 chromedriver + 712865
+5   chromedriver                        0x000000010a5829a4 chromedriver + 981412
+6   chromedriver                        0x000000010a56503d chromedriver + 860221
+7   chromedriver                        0x000000010a57fe76 chromedriver + 970358
+8   chromedriver                        0x000000010a564de3 chromedriver + 859619
+9   chromedriver                        0x000000010a532d7f chromedriver + 654719
+10  chromedriver                        0x000000010a5340de chromedriver + 659678
+11  chromedriver                        0x000000010a9042ad chromedriver + 4657837
+12  chromedriver                        0x000000010a909130 chromedriver + 4677936
+13  chromedriver                        0x000000010a90fdef chromedriver + 4705775
+14  chromedriver                        0x000000010a90a05a chromedriver + 4681818
+15  chromedriver                        0x000000010a8dc92c chromedriver + 4495660
+16  chromedriver                        0x000000010a927838 chromedriver + 4802616
+17  chromedriver                        0x000000010a9279b7 chromedriver + 4802999
+18  chromedriver                        0x000000010a93899f chromedriver + 4872607
+19  libsystem_pthread.dylib             0x00007ff8098784e1 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff809873f6b thread_start + 15
+
+
+
